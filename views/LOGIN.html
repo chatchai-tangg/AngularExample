@@ -1,0 +1,52 @@
+<md-content layout="row" layout-align="center center" layout-padding style="height:100vh;">
+    <div flex="100" flex-md="70" flex-gt-md="50">
+        <img src="img/edoc-400.png" alt="Edoc Logo" class="login-logo">
+        <md-card>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h3 md-truncate>
+                        ระบบสารบรรณอิเล็กทรอนิกส์ มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร
+                        <small>v3.0</small>
+                    </h3>
+                </div>
+            </md-toolbar>
+            <md-card-content>
+                <form name="f" ng-submit="(f.$valid) ? login(user) : null" novalidate class="m-3">
+                    <fieldset layout="column" ng-disabled="isLoading">
+                        <md-input-container flex="100">
+                            <label>Username</label>
+                            <input ng-model="user.Username" name="Username" type="text" required>
+                            <div ng-messages="f.Username.$error">
+                                <div ng-message="required">This is required.</div>
+                            </div>
+                        </md-input-container>
+
+                        <md-input-container flex="100">
+                            <label>Password</label>
+                            <input ng-model="user.Password" name="Password" type="password" required>
+                            <div ng-messages="f.Password.$error">
+                                <div ng-message="required">This is required.</div>
+                            </div>
+                        </md-input-container>
+
+                        <md-progress-linear ng-show="isLoading" md-mode="indeterminate" flex="100">
+                        </md-progress-linear>
+
+                        <md-card ng-show="hasError" class="alert">
+                            <md-card-content>{{errorMsg}}</md-card-content>
+                        </md-card>
+
+                        <div layout="row" layout-align="center">
+                            <md-button type="submit" class="md-raised md-primary">
+                                Login
+                            </md-button>
+                        </div>
+
+                        <p>{{user}}</p>
+
+                    </fieldset>
+                </form>
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>

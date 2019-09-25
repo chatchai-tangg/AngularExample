@@ -1,0 +1,47 @@
+/* ng-animate fade */
+.nga-fade.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+.nga-fade.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.login-logo {
+    max-width: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kanit', sans-serif;
+}
+
+.alert {
+    background: rgb(244, 67, 54);
+    color: rgb(255, 255, 255);
+}
+
+.md-sidenav-left .nav-header {
+    margin-bottom: -1px;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    z-index: 1;
+}
+
+.md-sidenav-left .nav-header img {
+    width: 200px;
+    margin: 0px auto;
+    display: block;
+}

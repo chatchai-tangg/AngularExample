@@ -1,0 +1,28 @@
+<div layout="row" class="layout-control" style="height:100vh;">
+
+    <md-sidenav md-theme="sidenav" class="md-sidenav-left" md-component-id="sidenav-left"
+        md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="4">
+        <header class="nav-header">
+            <a ui-sref="main.edoc">
+                <img src="img/edoc-w-400.png" alt="Edoc Logo">
+            </a>
+        </header>
+        <md-content>
+            <md-list flex>
+                <md-list-item ui-sref="main.edoc" ui-sref-active="active">
+                    <md-icon md-font-icon="material-icons">insert_drive_file</md-icon>
+                    <p>Edoc</p>
+                </md-list-item>
+                <md-list-item ui-sref="logout">
+                    <md-icon md-font-icon="material-icons">exit_to_app</md-icon>
+                    <p>Logout</p>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+
+    <ui-view layout="column" flex class="nga-fade"></ui-view>
+
+    <!-- เพิ่มเมนู E-payslip / E-meeting / leaveonline -->
+
+</div>
