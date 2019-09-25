@@ -1,3 +1,7 @@
-<md-content layout-padding>
+<md-content layout-padding>    
     <p>Edoc 555</p>
+
+    <mat-sidenav #sidenav role="navigation">
+            <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+          </mat-sidenav>
 </md-content>

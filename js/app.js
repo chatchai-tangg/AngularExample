@@ -26,6 +26,18 @@ angular.module('app', ['ui.router', 'ngMaterial', 'ngMessages', 'ngAnimate', 'Lo
                 url: '/edoc',
                 templateUrl: 'views/MAIN.EDOC.html',
             })
+            .state('MAIN.epay', {
+                url: '/epay',
+                templateUrl: 'views/MAIN.epay.html',
+            })
+            .state('MAIN.emeeting', {
+                url: '/emeeting',
+                templateUrl: 'views/MAIN.emeeting.html',
+            })
+            .state('MAIN.leave', {
+                url: '/leave',
+                templateUrl: 'views/MAIN.leave.html',
+            })            
             .state('logout', {
                 url: '/logout',
                 onEnter: function (UserService) {
